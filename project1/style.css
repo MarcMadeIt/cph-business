@@ -56,12 +56,9 @@ main> :not(.splash):not(.proces) {
 }
 
 @media screen and (min-width: 600px) {
-
-
     .splash,
     .proces {
         width: 48%;
-
     }
 }
 
