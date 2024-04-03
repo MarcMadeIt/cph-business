@@ -5,8 +5,6 @@
 }
 
 body {
-    height: 100vh;
-
     --bg: #ddd;
     --item: lightgreen;
     --text: #000000;
@@ -20,8 +18,6 @@ header {
     justify-content: space-between;
     align-items: center;
     border: 1px solid var(--text);
-    margin-bottom: 20px;
-
 }
 
 .logo {
@@ -49,19 +45,33 @@ header {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+main> :not(.splash):not(.proces) {
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+
+
+    .splash,
+    .proces {
+        width: 48%;
+
+    }
 }
 
 .hero-item {
     height: 400px;
-    width: 100%;
     background-color: var(--bg);
     border: 1px solid var(--text);
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 
@@ -70,12 +80,14 @@ main {
     flex-direction: row;
     justify-content: space-between;
     height: 300px;
+    width: 100%;
     gap: 20px;
     background-color: var(--bg);
     border: 1px solid var(--text);
     padding: 10px;
     display: flex;
     align-items: center;
+    order: 1;
 }
 
 .tilbud-item {
@@ -104,7 +116,6 @@ main {
 
 footer {
     height: 50px;
-    margin: 20px 0;
 }
 
 .container-footer {
@@ -117,11 +128,41 @@ footer {
     justify-content: center;
 }
 
+.menu-btn {
+    display: none;
+}
 
-@media screen and (min-width: 1045px) {
+
+@media screen and (max-width: 600px) {
 
 
     .container-tilbud {
         flex-direction: row-reverse;
+        order: 1;
     }
+
+    .splash {
+        order: -1;
+        width: 100%;
+    }
+
+    .proces {
+        order: 3;
+        width: 100%;
+    }
+
+    .nav {
+        width: 70px;
+        text-align: center;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+
 }
