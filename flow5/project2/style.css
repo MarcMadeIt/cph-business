@@ -91,7 +91,6 @@ footer {
     display: none;
 }
 
-
 @media screen and (min-width: 600px) {
     .cards {
         grid-template-columns: repeat(3, 1fr);
@@ -127,14 +126,13 @@ footer {
     }
 }
 
-
-
 @media screen and (max-width: 900px) {
 
 
     .nav {
         width: 70px;
         text-align: center;
+        justify-self: end;
     }
 
     .nav ul {
@@ -145,10 +143,4 @@ footer {
         display: block;
 
     }
-
-    .nav {
-        justify-self: end;
-    }
-
-
 }
