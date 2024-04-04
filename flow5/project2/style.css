@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --bg: #efefef;
+    --border: 1px solid #000000;
+    --text: #000000;
+    padding: 10px;
+    font-family: fantasy;
+    letter-spacing: .6px;
+}
+
+header {
+    padding: 10px;
+    background: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--text);
+}
+
+.logo {
+    background-color: var(--item);
+    color: var(--text);
+    padding: 10px;
+    border: 1px solid var(--text);
+}
+
+.nav {
+    background-color: var(--item);
+    color: var(--text);
+    padding: 10px;
+    border: 1px solid var(--text);
+    width: 50%;
+
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+
+.hero {
+    border: var(--border);
+}
+
+img {
+    width: 100%;
+}
+
+.desc {
+    padding: 15px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.cards>div:nth-child(1) {
+    grid-column: 1 / span 2;
+}
+
+.card {
+    border: var(--border);
+}
+
+
+
+
+footer {
+    height: 50px;
+}
+
+.container-footer {
+    background-color: var(--bg);
+    border: 1px solid var(--text);
+    padding: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+@media screen and (min-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .cards>div:nth-child(1) {
+        grid-column: 1 / span 3;
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    .cards {
+        row-gap: 50px;
+        margin: 40px 0;
+    }
+
+    .cards>div:nth-child(1) {
+        grid-column: 1 / span 2;
+    }
+
+    .cards>div:nth-child(4) {
+        grid-column: 2 / span 2;
+    }
+
+    .cards>div:nth-child(2) {
+        align-self: end;
+    }
+
+    .cards>div:nth-child(3) {
+        align-self: start;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+
+    .nav {
+        width: 70px;
+        text-align: center;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+
+}
