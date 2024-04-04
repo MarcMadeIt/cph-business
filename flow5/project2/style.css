@@ -16,8 +16,8 @@ body {
 header {
     padding: 10px;
     background: var(--bg);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 50%;
     align-items: center;
     border: 1px solid var(--text);
 }
@@ -27,6 +27,7 @@ header {
     color: var(--text);
     padding: 10px;
     border: 1px solid var(--text);
+    justify-self: start;
 }
 
 .nav {
@@ -34,8 +35,6 @@ header {
     color: var(--text);
     padding: 10px;
     border: 1px solid var(--text);
-    width: 50%;
-
 }
 
 .nav ul {
@@ -50,10 +49,6 @@ main {
     gap: 20px;
     margin: 10px 0;
     justify-content: space-between;
-}
-
-.hero {
-    border: var(--border);
 }
 
 img {
@@ -77,9 +72,6 @@ img {
 .card {
     border: var(--border);
 }
-
-
-
 
 footer {
     height: 50px;
@@ -151,6 +143,11 @@ footer {
 
     .menu-btn {
         display: block;
+
+    }
+
+    .nav {
+        justify-self: end;
     }
 
 
